@@ -1,0 +1,32 @@
+<div id="leaders_table"></div>
+
+
+<script type="text/javascript" data-cfasync="false">
+function RenderLeadersTable(data) {
+    
+    var a = data,
+        h = document.getElementById("leaders_table"),
+        t = document.createElement("table");
+
+
+    t.setAttribute("width", "100%");
+    t.innerHTML = "<tr><th>Rank</th><th>Racer</th><th>K1RS</th><th>Location</th></tr>";    
+            
+    for (var i=0;i<a.length;i++) {
+        var tr = document.createElement("tr"),
+            html = ""; 
+            
+        html += "<td class=place>" + (i+1) + "</td>";
+        html += "<td class=name>" + (a[i]["name"]) + "</td>";
+        html += "<td class=score>" + (a[i]["rpm"]) + "</td>";
+        html += "<td class=location>" + (a[i]["location"]) + "</td>";
+            
+        tr.innerHTML=html;
+        
+        t.appendChild(tr);
+    }
+        
+    h.appendChild(t);  
+}
+</script>
+<script type="text/javascript" data-cfasync="false" src="/k1.clubspeed.api.php?mode=leaders&callback=RenderLeadersTable"></script>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--This is for HTML4.01 Transitional --> 
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+<html>
+	<head><title>
+		RW Test
+	</title></head>
+	<div class="nav">
+		<div id="navList">
+			<!-- <a href="http://atlanta.braves.mlb.com/index.jsp?c_id=atl"><button class="accordion">Home</button></a> -->
+				<button class="accordion">Home</button>
+				<div class="panel">
+					<a href="http://atlanta.braves.mlb.com/schedule/index.jsp?c_id=atl#y=2017&m=4&calendar=DEFAULT"><button>Schedule</button></a>
+					<a href="http://atlanta.braves.mlb.com/fan_forum/index.jsp?c_id=atl"><button>Fan</button></a>
+					<a href="http://www.mlbshop.com/Atlanta_Braves_Gear?partnerId=71N38QV8B1-14"><button>Shop</button></a>
+				</div>
+			<a href="http://m.braves.mlb.com/roster"><button class="accordion">Roster</button></a>
+			<a href="http://atlanta.braves.mlb.com/stats/sortable.jsp?c_id=atl#playerType=ALL&elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Player+hitting&game_type='R'&season=2016&season_type=ANY&league_code='MLB'&sectionType=sp&statType=hitting&page=1&ts=1485236708321"><button class="accordion">Stats</button></a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+		for (i = 0; i < acc.length; i++) {
+		    acc[i].onclick = function(){
+		        /* Toggle between adding and removing the "active" class,
+		        to highlight the button that controls the panel */
+		        this.classList.toggle("active");
+
+		        /* Toggle between hiding and showing the active panel */
+		        var panel = this.nextElementSibling;
+		        if (panel.style.display === "block") {
+		            panel.style.display = "none";
+		        } else {
+		            panel.style.display = "block";
+		        }
+		    }
+		}
+</script>
+	<body><div id="insideWind"></div></body>
+</html>
